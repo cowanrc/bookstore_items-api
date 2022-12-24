@@ -1,13 +1,23 @@
 package app
 
-import "github.com/gin-gonic/gin"
+import (
+	"net/http"
+
+	"github.com/gorilla/mux"
+)
 
 var (
-	r = gin.Default()
+	router = mux.NewRouter()
 )
 
 func StartApplication() {
 	mapUrls()
-	r.Run(":8080")
 
+	srv := &http.Server{
+		Handler: router,
+		Addr:    "127.0.0.1:8083",
+	}
+	if err := srv.ListenAndServe(); err != nil {
+		panic(err)
+	}
 }

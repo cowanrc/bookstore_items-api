@@ -1,0 +1,14 @@
+# github.com/cowanrc/bookstore_oauth-go v0.0.1
+## explicit; go 1.19
+github.com/cowanrc/bookstore_oauth-go/oauth
+# github.com/cowanrc/bookstore_utils-go v0.0.0-20221120234602-b650a41f8c7a
+## explicit
+github.com/cowanrc/bookstore_utils-go/rest_errors
+# github.com/gorilla/mux v1.8.0
+## explicit; go 1.12
+github.com/gorilla/mux
+# github.com/mercadolibre/golang-restclient v0.0.0-20170701022150-51958130a0a0
+## explicit
+github.com/mercadolibre/golang-restclient/rest
+# github.com/stretchr/testify v1.8.1
+## explicit; go 1.13

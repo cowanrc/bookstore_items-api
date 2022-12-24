@@ -1,14 +1,12 @@
 package app
 
 import (
-	"bookstore_items-api/controllers/ping"
-	"bookstore_items-api/controllers/users"
+	"bookstore_items-api/controllers"
+	"net/http"
 )
 
 func mapUrls() {
-	r.GET("/ping", ping.Ping)
+	router.HandleFunc("/items", controllers.ItemsController.Create).Methods(http.MethodPost)
 
-	r.GET("/users/:user_id", users.GetUser)
-	// r.GET("/users/search", users.SearchUser)
-	r.POST("/users", users.CreateUser)
+	router.HandleFunc("/ping", controllers.PingController.Ping).Methods(http.MethodGet)
 }
